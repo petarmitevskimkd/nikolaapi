@@ -23,8 +23,7 @@ public func routes(_ router: Router) throws {
     router.post("clean", use: locationController.uploadCleanLocation)
     router.get("locations", use: locationController.returnLocations)
     
-    let clientController = ClientTest()
-    router.get("clientTest", use: clientController.client)
+
 //    router.get("todos", use: todoController.index)
 //    router.post("todos", use: todoController.create)
 //    router.delete("todos", Todo.parameter, use: todoController.delete)
