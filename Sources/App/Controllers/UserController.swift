@@ -60,7 +60,7 @@ final class UserController{
                         throw Abort(.unauthorized, reason: "greshen pin")
                     }else{
                         let token = Token.init(id: UUID.init(), token: tokenToken, createDate: Date(), expireDate: Calendar.current.date(byAdding: .minute, value: 60, to: Date())!, userId: user.id!)
-                        token.create(on: req)
+                        print(token.create(on: req))
                         return userlogin
 
                         }
